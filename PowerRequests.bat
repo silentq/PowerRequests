@@ -22,6 +22,8 @@ powercfg /requests
 set /p run_again=Do you want to check current Power Requests again? (Y/N):
 if /i "%run_again%"=="Y" goto run_command
 if /i "%run_again%"=="N" goto :eof
+echo Invalid input. Please enter Y or N.
+goto ask
 
 :: Exit the script
 exit /b
