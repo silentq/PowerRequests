@@ -18,6 +18,7 @@ pause >nul
 :: Run the powercfg /requests command
 powercfg /requests
 
+:ask
 :: Prompt to ask if the user wants to run the command again
 set /p run_again=Do you want to check current Power Requests again? (Y/N):
 if /i "%run_again%"=="Y" goto run_command
