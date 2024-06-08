@@ -10,13 +10,14 @@ if %errorLevel% neq 0 (
     exit /b
 )
 
-::initial run
+:: Initial run
 echo Press any key to check current Power Requests
 pause >nul
 
 :run_command
 :: Run the powercfg /requests command
 powercfg /requests
+goto ask
 
 :ask
 :: Prompt to ask if the user wants to run the command again
@@ -25,6 +26,3 @@ if /i "%run_again%"=="Y" goto run_command
 if /i "%run_again%"=="N" goto :eof
 echo Invalid input. Please enter Y or N.
 goto ask
-
-:: Exit the script
-exit /b
