@@ -13,7 +13,7 @@ if %errorLevel% neq 0 (
 ::initial run
 echo Press any key to check current Power Requests
 pause >nul
-:run-command
+:run_command
 
 :run_command
 :: Run the powercfg /requests command
