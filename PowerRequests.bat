@@ -10,7 +10,11 @@ if %errorLevel% neq 0 (
     exit /b
 )
 
-:: Initial run
+:: Initial run 
+echo PowerRequests v1.3
+echo.
+echo For the latest updates https://github.com/silentq/PowerRequests/releases
+echo.
 echo Press any key to check current Power Requests
 pause >nul
 
