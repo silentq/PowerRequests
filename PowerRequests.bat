@@ -6,12 +6,12 @@
 net session >nul 2>&1
 if %errorLevel% neq 0 (
     echo Requesting administrative privileges...
-    powershell -command "Start-Process cmd -ArgumentList '/c %~fnx0' -Verb RunAs"
+    powershell -command "Start-Process -FilePath '%~f0' -WorkingDirectory '%~dp0' -Verb RunAs"
     exit /b
 )
 
 :: Initial run 
-echo PowerRequests v1.3
+echo PowerRequests v1.4
 echo.
 echo For the latest updates https://github.com/silentq/PowerRequests/releases
 echo.
